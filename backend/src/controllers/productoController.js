@@ -1,6 +1,6 @@
 const pool = require('../config/db');
 
-const getProductos = async (req, res) => {
+const getProductos = async (req, res) => { //abc
     try {
         const query = `SELECT * FROM productos ORDER BY id ASC`;
         const response = await pool.query(query);
