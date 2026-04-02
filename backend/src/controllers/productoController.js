@@ -6,7 +6,7 @@ const getProductos = async (req, res) => { //abc
         const response = await pool.query(query);
         res.json(response.rows);
     } catch (error) {
-        res.status(500).json({ error: 'Error al listar productos' });
+        res.status(500).json({ err: 'Error al listar productos', error });
     }
 };
 

@@ -20,7 +20,7 @@ const register = async (req, res) => {
         res.status(201).json({ msg: "Usuario registrado con éxito", user: newUser.rows[0] });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: "Error en el servidor" });
+        res.status(500).json({ err: "Error en el servidor", error });
     }
 };
 
@@ -39,7 +39,7 @@ const login = async (req, res) => {
 
         res.json({ msg: "Bienvenido", token: token });
     } catch (error) {
-        res.status(500).json({ error: "Error en el servidor" });
+        res.status(500).json({ err: "Error en el servidor", error });
     }
 };
 
