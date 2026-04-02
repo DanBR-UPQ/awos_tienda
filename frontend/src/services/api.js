@@ -1,5 +1,7 @@
 const API_URL = "https://awos-tienda-etdx.onrender.com/api"
 
+// ajkafl
+
 export const api = {
   get: async (endpoint) => {
     const token = localStorage.getItem('token');
